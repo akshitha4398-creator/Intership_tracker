@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER + NAV BAR -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="logo">📋 InternTrack</a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#stats">Overview</a>
+        <a href="#add">Add Application</a>
+        <a href="#applications">My Applications</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Track every internship application in one place</h1>
+        <p>Stop losing track of where you applied. Add applications, update their status, and see your progress at a glance.</p>
+        <a href="#add" class="hero-btn">Add your first application</a>
+      </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section id="stats" class="section">
+      <div class="container">
+        <h2 class="section-title">Overview</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number" id="stat-total">0</span>
+            <span class="stat-label">Total Applied</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="stat-interview">0</span>
+            <span class="stat-label">Interviews</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="stat-offer">0</span>
+            <span class="stat-label">Offers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="stat-rejected">0</span>
+            <span class="stat-label">Rejected</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADD APPLICATION SECTION -->
+    <section id="add" class="section">
+      <div class="container">
+        <h2 class="section-title">Add Application</h2>
+        <div class="card">
+          <form id="app-form">
+            <div class="field">
+              <label for="company">Enter company name</label>
+              <input type="text" id="company" placeholder="e.g. Google" required>
+            </div>
+
+            <div class="field">
+              <label for="role">Enter role</label>
+              <input type="text" id="role" placeholder="e.g. SWE Intern" required>
+            </div>
+
+            <div class="field">
+              <label for="status">Select status</label>
+              <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="OA">OA / Test</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="date">Date applied</label>
+              <input type="date" id="date" required>
+            </div>
+
+            <button type="submit">Add Application</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATIONS LIST SECTION -->
+    <section id="applications" class="section">
+      <div class="container">
+        <h2 class="section-title">My Applications</h2>
+        <div class="card">
+          <div class="toolbar">
+            <input type="text" id="search" placeholder="Search by company or role...">
+            <select id="filter-status">
+              <option value="All">All statuses</option>
+              <option value="Applied">Applied</option>
+              <option value="OA">OA / Test</option>
+              <option value="Interview">Interview</option>
+              <option value="Offer">Offer</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="app-list"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 InternTrack. Built with HTML, CSS & JavaScript.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#add">Add</a>
+        <a href="#applications">Applications</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
